@@ -1,0 +1,21 @@
+{
+	// aaaa
+	"name": "Hello Extensions",
+	"description" : "Base Level Extension",
+	"version": "1.0",
+	"manifest_version": 2,
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*" ],
+		"js": ["jquery-3.4.1.min.js", "content.js"]
+	}],
+
+	"commands": {
+		"_execute_browser_action": {
+		"suggested_key": {
+			"default": "Ctrl+Q",
+			"mac": "MacCtrl+Q"
+		},
+		"description": "Opens content.js"
+		}
+	}
+}
